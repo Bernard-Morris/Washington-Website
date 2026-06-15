@@ -1,0 +1,517 @@
+/* ===========================
+   Global Styles
+   =========================== */
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #666768;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* ===========================
+     Header Styles
+     =========================== */
+     header {
+      margin: 0;
+      padding: 1px 0;
+      position: relative;
+      height: 200px; 
+      background-image: url('/images/earl-peak-by-nellas.jpg');
+      background-size: cover;
+      background-position: center 45%;
+  }
+  .header-content .title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+  
+  .olympia {
+    background-image: url('/images/olympia-header-image.jpg');
+    background-size: cover;
+    background-position: center 75%;
+    background-repeat: no-repeat;
+    height: 200px;
+  }
+  
+  .tacoma {
+    background-image: url('/images/tacoma-header-image.jpg');
+    background-size: cover;
+    background-position: center 75%;
+    background-repeat: no-repeat;
+    height: 200px;
+  }
+  
+  .seattle {
+    background-image: url('/images/seattle-header-image.jpg');
+    background-size: cover;
+    background-position: center 75%;
+    background-repeat: no-repeat;
+    height: 200px;
+  }
+  
+
+  
+  .logo {
+    float: left; /* Made the logo float. Due to aside being flex, float property wasn't applying easier to change header so the float property works now. */
+    width: 150px;
+    height: 150px;
+}
+  
+  .logo-number {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    font-size: 0.6em;
+    color: #ffffff;
+    background-color: #0f60b1;
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+  
+  .title {
+    font-size: clamp(5em, 7vw, 6.5em);
+    color: rgba(15, 96, 177, 0.8);
+    -webkit-text-stroke: 1px white;
+    text-align: center;
+    text-shadow: -7px 5px 3px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  
+  /* ===========================
+     Navigation Styles
+     =========================== */
+  nav {
+    width: 100%;
+    background-color: #0f60b1;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+  }
+  
+  nav a:hover {
+    background-color: #ff4500;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  /* ===========================
+     Main Styles
+     =========================== */
+  main {
+    display: flex;
+    padding: 6px;
+    margin: 0;
+    background: linear-gradient(180deg, #0f60b1, #40e0d0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    
+  }
+  
+  /* ===========================
+     Section Styles
+     =========================== */
+  section {
+      width: 80%;
+      background-color: rgba(140, 190, 240, 0.5); 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+  section p {
+    margin: 20px 0;
+    line-height: 1.3;
+    text-align: justify;
+  }
+  
+ main .city-section {
+    background-color: rgba(140, 190, 240, 0.5); 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+  }
+  
+  .cities-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .cities-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .city-section h2 {
+    text-align: center;
+    color: #0f60b1; 
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .city-info-table {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 5px 10px; 
+    margin: 20px 0;
+    border-radius: 20px; 
+    overflow: hidden;
+}
+
+.city-info-table th,
+.city-info-table td {
+    text-align: left;
+    padding: 10px;
+    border: none; 
+    border-radius: 20px;
+    background-color: #ffffff; 
+    color: #333; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.city-info-table th {
+    background-color: #0f60b1; 
+    color: white;
+    font-weight: bold;
+}
+  .city-info-table td {
+    background-color: #ffffff; 
+    color: #333; 
+    border-radius: 60px;
+  }
+
+  
+  /* ===========================
+     Aside Styles
+     =========================== */
+
+  
+  aside {
+      width: 20%;
+      background-color: rgba(64, 224, 208, 0.5); 
+      color: black;
+      padding: 20px;
+      border-radius: 5px;
+      margin-left: 10px;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  aside div {
+    background-color: #aed6f8;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+ main .city-aside {
+    background-color: rgba(64, 224, 208, 0.5); 
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+}
+
+.city-aside ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.city-aside li {
+    margin-bottom: 10px; 
+}
+
+.city-aside div {
+    display: flex;
+    flex-direction: column;
+    background-color: #aed6f8; 
+    padding: 15px;
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    gap: 116px;
+}
+  .city-aside h4 {
+    margin: auto;
+    font-size: 1.2em;
+    color: #0f60b1; 
+  }
+  
+  .city-aside sup a {
+    color: #0f60b1; 
+    text-decoration: none;
+  }
+  
+  .city-aside sup a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  
+  /* ===========================
+     Image Styles
+     =========================== */
+  .city-image-container {
+    background-color: #aed6f8;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 300px;
+  }
+  
+  .city-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .city-image-page {
+    width: 100%; 
+    height: 590px; 
+    object-fit: cover; 
+    border-radius: 5px; 
+    margin-top: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+  
+  .fun-fact-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* ===========================
+     Footer Styles
+     =========================== */
+  #footer {
+    background-color: #0f60b1;
+    color: white;
+    text-align: center;
+    border-top: 5px solid #ff4500;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    padding: 10px;
+  }
+  
+  .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+    gap: 10px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 10px auto;
+    padding: 0 60px;
+  }
+  
+  .references-container {
+    text-align: left;
+    overflow-wrap: break-word;
+  }
+  
+  .references-container ol {
+    columns: 3;
+    column-gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: decimal;
+  }
+  
+  .references-container ol[type="a"] {
+    columns: auto;
+    list-style: lower-alpha;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+  
+  .references-container ol li {
+    margin-bottom: 10px;
+    font-size: 0.85em;
+    word-wrap: break-word;
+  }
+  
+  .references-container ol li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .references-container ol li a:hover {
+    color: coral;
+  }
+  
+  /* ===========================
+     Forms and CTA Styles
+     =========================== */
+  .cta-button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background-color: #ff4500;
+  }
+  
+  .form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    color: #0f60b1;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #ffffff;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-group input[type="text"]:focus,
+  .form-group input[type="email"]:focus,
+  .form-group textarea:focus {
+    border-color: #0f60b1;
+    box-shadow: 0 0 5px rgba(15, 96, 177, 0.5);
+    outline: none;
+  }
+  
+  .form-group.submit input[type="submit"] {
+    background-color: #0f60b1;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .form-group.submit input[type="submit"]:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+  }
+  
+  .form-group.submit input[type="submit"]:active {
+    background-color: #e63900;
+    transform: scale(0.95);
+  }
+  
+  /* ===========================
+     Media Queries
+     =========================== */
+     @media (max-width: 960px) {
+      .title {
+          font-size: 4em;
+          -webkit-text-stroke: 0.5px whitesmoke;
+          letter-spacing: 0em;
+      }
+  
+      .header-content {
+          flex-direction: column;
+          gap: 10px;
+      }
+  
+      .logo {
+          width: 100px;
+          height: 100px;
+      }
+  
+      nav a {
+          padding: 5px 10px;
+          font-size: 0.9em;
+      }
+  
+      aside,
+      .city-aside {
+          width: 40%;
+          float: none;
+          margin-left: 0;
+          padding: 10px;
+      }
+  
+      section,
+      .city-section {
+          width: 60%;
+          margin-right: 0;
+          padding: 10px;
+      }
+  
+      main {
+          flex-wrap: wrap;
+          display: flex;
+      }
+  }
+  
+  @media (min-width: 600px) {
+    .references-container ol {
+      columns: 4;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .references-container ol {
+      columns: 5;
+    }
+  }

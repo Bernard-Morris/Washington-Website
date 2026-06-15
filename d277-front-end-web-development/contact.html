@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+       <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="form-container">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <div class="form-group firstName">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName">
+                </div>
+                <div class="form-group lastName">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName">
+                </div>
+                <div class="form-group email">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="confirmEmail confirm">Confirm Email Address:</label>
+                    <input type="email" id="confirmEmail" name="confirmEmail">
+                </div>
+                <div class="form-group question">
+                    <label for="question">Ask A Question:</label>
+                    <textarea id="question" name="question" rows="5" placeholder="Type your question here..."></textarea>
+                </div>
+                <div class="form-group submit">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("contactForm").addEventListener("submit", function(event) {
+                    const email = document.getElementById("email").value;
+                    const confirmEmail = document.getElementById("confirmEmail").value;
+
+                    if (email !== confirmEmail) {
+                        event.preventDefault();
+                        alert("The email addresses do not match. Please try again.");
+                    }
+                });
+            });
+        </script>
+    </body>
+
+</html>
